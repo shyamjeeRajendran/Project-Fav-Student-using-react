@@ -56,12 +56,12 @@ function Student() {
   return (
     <div>
       <div>
-        <h1 className="bg-violet-600 text-5xl font-bold p-6 text-white text-center">
+        <h1 className="bg-violet-600 text-3xl font-bold p-6 text-white text-center md:text-5xl">
           Student Profile Management
         </h1>
       </div>
 
-      <div className="flex align-middle justify-around mt-5 flex-wrap ">
+      <div className="flex align-middle justify-around mt-5 flex-wrap gap-3">
         <div className=" w-fit p-4 border border-gray-400 h-fit flex  flex-col gap-2">
           <div className="bg-green-400 p-5 text-center text-4xl rounded-xl">
             <h2 className="text-white">Add Student</h2>
@@ -99,29 +99,29 @@ function Student() {
           </button>
         </div>
         <div>
-          <div className="bg-green-400 p-4 text-center text-4xl rounded-md mb-2">
+          <div className="bg-green-400 p-3 text-center text-4xl rounded-md mb-2 md:p-5">
             <h2 className="text-center text-white">Student List</h2>
           </div>
 
           <table className=" border border-collapse border-gray-600">
             <thead>
               <tr>
-                <th className=" border border-gray-600 p-3">Id</th>
-                <th className=" border border-gray-600 p-3">Roll.No</th>
-                <th className=" border border-gray-600 p-3">Name</th>
-                <th className=" border border-gray-600 p-3">Action</th>
+                <th className=" border border-gray-600 p-1.5 md:p-3">Id</th>
+                <th className=" border border-gray-600 p-1.5 md:p-3">Roll.No</th>
+                <th className=" border border-gray-600 p-1.5 md:p-3">Name</th>
+                <th className=" border border-gray-600 p-1.5 md:p-3">Action</th>
               </tr>
             </thead>
             <tbody>
               {students.map((item, ind) => {
                 return (
                   <tr key={item.id}>
-                    <td className=" border border-gray-600 p-3">{ind + 1}</td>
-                    <td className=" border border-gray-600 p-3">{item.roll}</td>
-                    <td className=" border border-gray-600 p-3">{item.name}</td>
-                    <td className=" border border-gray-600 p-3">
+                    <td className=" border border-gray-600 p-1.5 md:p-3">{ind + 1}</td>
+                    <td className=" border border-gray-600 p-1.5 md:p-3">{item.roll}</td>
+                    <td className=" border border-gray-600 p-1.5 md:p-3">{item.name}</td>
+                    <td className=" border border-gray-600 p-1.5 md:p-3">
                       <button
-                        className=" bg-blue-700 text-white rounded-md hover:cursor-pointer p-2"
+                        className=" bg-blue-700 text-white rounded-md hover:cursor-pointer p-1 md:p-2"
                         onClick={() => {
                           handleAdd(item);
                         }}
